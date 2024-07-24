@@ -1,0 +1,77 @@
+ion-content {
+    --background: #242424;
+    
+  }
+  ion-card{
+    --background: #504B3E;
+  }
+/* Styling for card titles */
+ion-card-title {
+    font-size: 18px; /* Adjust the font size as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex: 1; /* Ensure title takes up remaining space */
+  }
+  ion-title{
+    font-size: 20px; /* Adjust the font size as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5%;
+    color: #a58f74;
+    text-align: center;
+  }
+  
+  /* Styling for card subtitles */
+   ion-card-subtitle {
+    font-size: 10px; /* Adjust the font size as needed */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5%;
+    color: #a58f74; 
+  }
+/* Styling for like button container */
+.like-button-container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #a58f74; 
+  }
+  
+  /* Styling for like button */
+  .like-button {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #a58f74; /* Set the color of the like button */
+    padding: 5px;
+  }
+  ion-button{
+    --color: #a58f74;
+  }
+  /* Add shadow to ion-card */
+
+  
+  ion-card.painting-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .no-liked-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #a58f74;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .no-liked-items p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Add text shadow */
+}
+  

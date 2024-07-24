@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Liked Paintings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="!loading; else loadingTemplate">
+    <ng-container *ngIf="likedPaintings.length > 0; else noLikedItemsTemplate">
+      <div class="Card container">
+        <div class="card-container">
+          <ion-card *ngFor="let painting of likedPaintings" (click)="viewDetails(painting)" class="painting-card">
+            <div class="card-content">
+              <img [alt]="painting.title" [src]="painting.primaryImage" />
+              <ion-card-header>
+                <ion-card-subtitle>{{ painting.artistDisplayName || 'Undefined Artist' }}</ion-card-subtitle>
+                <ion-card-title>{{ painting.title }}</ion-card-title>
+                <div class="like-button-container">
+                  <ion-button fill="clear" class="like-button" (click)="removeLike(painting)">
+                    <ion-icon [name]="painting.liked ? 'heart' : 'heart-outline'" size="large"></ion-icon>
+                  </ion-button>
+                </div>
+              </ion-card-header>
+            </div>
+          </ion-card>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noLikedItemsTemplate>
+      <div class="no-liked-items">
+        <p>No liked items found. Start liking paintings to see them here!</p>
+      </div>
+    </ng-template>
+  </ng-container>
+  <ng-template #loadingTemplate>
+    <div class="loading-container">
+      <ion-progress-bar type="indeterminate" color="medium"></ion-progress-bar>
+    </div>
+  </ng-template>
+</ion-content>
