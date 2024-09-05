@@ -1,0 +1,471 @@
+body {
+
+    font-family: 'Xanh Mono';
+    background-color: rgba(27, 34, 30, 1);
+    color: #DCCDCB;
+
+}
+
+header {
+    font-family: "Fugaz One";
+    position: relative;
+    top: 0px;
+    background-color: rgba(0,0,0,0.5); 
+    
+
+}
+
+/*NavBar*/
+.navbar a {
+    font-family: 'Merriweather';
+    color: inherit;
+    text-decoration: none;
+    white-space: pre-line;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+.navbar {
+    text-align: center;
+    word-spacing: 100px;
+    padding: 20px;
+    background-color: black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: auto;
+    width: 80%;
+    
+
+}
+
+
+h1 {
+    font-family: 'Xanh Mono';
+}
+
+
+
+#main {
+    background: url("/media/beans.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pageTitle {
+    background: rgba(0,0,0,0.5); 
+    font-family: "Fugaz One";
+    text-align: center;
+    padding: 100px;
+    font-size: 50px;
+
+}
+
+
+.intro {
+    font-family: 'Xanh Mono';
+    font-size: 30px;
+    padding-left: 2%;
+    margin: 5%;
+    background-color: #4b534b66;
+    box-shadow: 0 5px 25px rgba(1 1 1/ 90%);
+    border-radius: 35px;
+    border: 3px dotted rgba(1 1 1/ 50%);
+}
+
+.text {
+    font-size: 25px;
+}
+
+
+.ARTtitle , .others1title, .others2title{
+    color: #ccc;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(1 1 1/ 100%);
+    background-color:#1f241f66 ;
+    border-radius: 20%;
+    margin: 7%;
+}
+
+
+#mainArticles {
+    display: flex;
+    color: #000;
+    margin: 5%;
+   
+
+}
+
+.Robusta , .Arabica {
+    color: #000;
+   background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 550px;
+    box-shadow:  12px 12px 1px#4b534b66;
+    margin: auto;
+    font-size: 20PX;
+    
+ 
+}
+.Robusta{
+    height: 1140PX;
+}
+.Robusta img , .Arabica img{
+    width:500px; 
+    height:500px;
+}
+
+.icons {
+    padding: 5%;
+    width: 50%;
+    margin:auto;
+    margin-left: 25%;
+  
+}
+
+.icons img {
+    width:100px; 
+    height:100px;
+    margin:3%;
+   
+}
+
+
+.decaf {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    color: #000;
+   background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 12px 12px 12px 1px#4b534b66;
+   
+}
+.decaf p{
+    padding: 10%;
+    font-size: 25PX;
+}
+.decaf h2{
+    padding: 3%;
+    padding-top: 10%;
+    font-size: 30PX;
+    border-radius: 40px;
+    box-shadow: 5px 12px 12px 12px#4b534b66;
+
+  
+}
+
+.Colombian,.Ethiopian, .Brazilian, .Jamaican, .Italian{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 550px;
+    box-shadow:  12px 12px 1px#4b534b66;
+    margin: 5%;
+    font-size: 20PX;
+}
+#others1 {
+    color: #000;
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    
+}
+#others1 h1{
+    text-align: center;
+}
+#others1 a {
+    text-decoration: none;
+    color: #000000fa;
+    font-weight: bold;
+}
+#others1 a:hover{
+    text-decoration:underline;
+    color: #486a48fa;
+
+}
+.Colombian{
+    height: 1140px;
+}
+.Jamaican{
+    height: 1130px;
+}
+
+.Ethiopian img , .Colombian img, .Jamaican img{
+    width:400px; 
+    height:400px;
+}
+#others2{
+
+    color: #000;
+    display: flex;
+  
+}
+#others2 a {
+    text-decoration: none;
+    color: #000000fa;
+    font-weight: bold;
+}
+#others2 a:hover{
+    text-decoration:underline;
+    color: #486a48fa;
+}
+
+
+
+@media (max-width: 576px) {
+    .navbar {
+        word-spacing: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .pageTitle {
+        padding: 50px;
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 20px;
+        padding-left: 1%;
+        margin: 3%;
+    }
+
+    .ARTtitle, .others1title, .others2title {
+        margin: 3%;
+    }
+    .Arabica img, .Robusta img{
+        width:450px; 
+        height:400px;
+    }
+    
+.icons img {
+    width:40px; 
+    height:50px;
+    margin:3%;
+   
+}
+
+    #mainArticles {
+        flex-direction: column;
+    }
+
+    .Robusta, .Arabica, .Colombian, .Ethiopian, .Brazilian, .Jamaican, .Italian {
+        max-width: 100%;
+        margin: 3%;
+    }
+
+    .decaf {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .decaf p {
+        padding: 5%;
+        font-size: 18px;
+    }
+
+    .decaf h2 {
+        padding: 2%;
+        font-size: 24px;
+    }
+
+    #others1 {
+        grid-template-columns: 1fr;
+    }
+
+    #others1 a {
+        font-size: 16px;
+    }
+
+    .Colombian, .Jamaican {
+        height: auto;
+    }
+    
+.Ethiopian img , .Colombian img , .Jamaican img{
+    width:500px; 
+    height:500px;
+}
+
+    #others2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        word-spacing: 15px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .pageTitle {
+        padding: 30px;
+        font-size: 36px;
+    }
+
+    .intro {
+        font-size: 18px;
+        padding-left: 1%;
+        margin: 2%;
+    }
+
+    .ARTtitle, .others1title, .others2title {
+        margin: 2%;
+    }
+
+    .Arabica img,
+    .Robusta img {
+        width: 350px;
+        height: 300px;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 40px;
+        margin: 2%;
+    }
+
+    #mainArticles {
+        flex-direction: column;
+    }
+
+    .Robusta,
+    .Arabica,
+    .Colombian,
+    .Ethiopian,
+    .Brazilian,
+    .Jamaican,
+    .Italian {
+        max-width: 100%;
+        margin: 2%;
+    }
+
+    .decaf {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .decaf p {
+        padding: 4%;
+        font-size: 16px;
+    }
+
+    .decaf h2 {
+        padding: 2%;
+        font-size: 20px;
+    }
+
+    #others1 {
+        grid-template-columns: 1fr;
+    }
+
+    #others1 a {
+        font-size: 14px;
+    }
+
+    .Colombian,
+    .Jamaican {
+        height: auto;
+    }
+
+    .Ethiopian img,
+    .Colombian img,
+    .Jamaican img {
+        width: 400px;
+        height: 400px;
+    }
+
+    #others2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .navbar {
+        word-spacing: 50px;
+        width: 90%;
+    }
+
+    .pageTitle {
+        padding: 50px;
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 25px;
+        padding-left: 1%;
+        margin: 3%;
+    }
+
+    .ARTtitle, .others1title, .others2title {
+        margin: 3%;
+    }
+
+    #mainArticles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Robusta, .Arabica, .Colombian, .Ethiopian, .Brazilian, .Jamaican, .Italian {
+        max-width: 90%;
+        font-size: 30px;
+    }
+
+    .Robusta, .Arabica {
+        height: auto;
+        margin: 5%;
+      
+    }
+
+    .Robusta img, .Arabica img, .Ethiopian img, .Colombian img, .Jamaican img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .decaf {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .decaf p {
+        padding: 5%;
+        font-size: 30px;
+    }
+
+    .decaf h2 {
+        padding: 2%;
+        padding-top: 5%;
+        font-size: 25px;
+    }
+
+    #others1 {
+        grid-template-columns: 1fr;
+    }
+
+    .icons {
+        margin:auto;
+        margin-left: 20%;
+    }
+    .icons img{
+        width: 40px;
+        height: 50px;
+       
+    }
+}

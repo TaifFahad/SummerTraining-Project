@@ -1,0 +1,298 @@
+body {
+    background-color: #493C2D;
+    color: #DCCDCB;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    font-family: "Fugaz One";
+    position: relative;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+.navbar a {
+    font-family: 'Merriweather';
+    color: inherit;
+    text-decoration: none;
+    white-space: pre-line;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+.navbar {
+    text-align: center;
+    word-spacing: 100px;
+    padding: 20px;
+    background-color: black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: auto;
+    width: 80%;
+
+
+}
+
+.main {
+    float: left;
+    width: 60%;
+    background-image: url("../media/r.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    border-top-left-radius: 25px;
+
+}
+
+.text {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    --mask:
+        radial-gradient(72.84px at calc(100% - 102.90px) 50%, #000 99%, #0000 101%) 0 calc(50% - 98px)/100% 196px,
+        radial-gradient(72.84px at calc(100% + 53.90px) 50%, #0000 99%, #000 101%) calc(100% - 49px) 50%/100% 196px repeat-y;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.text h1 {
+    font-family: 'Xanh Mono';
+    font-size: 7vmin;
+    text-align: center;
+    margin-top: 10%;
+    padding: 15px;
+
+}
+
+.text p {
+    font-family: 'Merriweather';
+    text-align: center;
+    margin: 50px;
+    padding: 15px;
+    font-size: 4vmin;
+    color: #dacaa6;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons i {
+    color: #dacaa6;
+    font-size: 50px;
+    padding-right: 30px;
+    padding-bottom: 2%;
+}
+
+.FormSection {
+    width: 40%;
+    height: 100vh;
+    float: right;
+    padding: auto;
+    margin: auto;
+}
+
+form {
+    font-family: 'Merriweather';
+    position: absolute;
+    font-size: large;
+    padding: 30px;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    background-color: #493C2D;
+    box-shadow: 0 5px 25px rgba(1 1 1/ 90%);
+    border-radius: 10px;
+    border: 3px dashed rgba(1 1 1/ 50%);
+}
+
+.formtitle {
+    text-align: center;
+    font-size: larger;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 50%;
+    padding-bottom: 15px;
+    padding-right: 5%;
+    border: 3px solid #555555;
+    border-radius: 5px;
+    margin: auto;
+}
+
+textarea {
+    display: block;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+button {
+    border-radius: 30px;
+    font-family: 'Xanh Mono';
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 3px solid #33241c;
+    float: right;
+
+}
+
+button:hover {
+    background-color: #2a1c15;
+    color: white;
+
+}
+
+input[type="button"]:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.closure {
+    margin-top: 739px;
+    background-image: url("../media/cubscoffee.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.closure>div {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 100px;
+    font-size: 25px;
+
+
+}
+
+.closure button {
+    margin-right: 45%;
+    padding: 10px 32px;
+}
+
+#insertForm {
+    overflow-y: auto;
+    height: 78%;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+
+    /* Adjust styles for screens up to 992px wide */
+    .navigation {
+        word-spacing: 30px;
+    }
+
+    .main {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .text p {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .FormSection {
+        width: 100%;
+        height: 50vh;
+        margin-right: -6%;
+    }
+
+    form {
+        width: 70%;
+        height: 50vh;
+
+    }
+
+    .closure {
+        margin-top: 1350px;
+    }
+
+}
+
+@media (max-width: 769px) {
+
+    /* Adjust styles for screens up to 786px wide */
+    .navigation {
+        word-spacing: 10px;
+    }
+
+    .main {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .text {
+
+        width: 100%;
+        height: 40vh;
+    }
+
+    #insertForm {
+        overflow-y: auto;
+        height: 74%;
+    }
+    
+    .closure {
+        margin-top: 1100px;
+    }
+}
+
+@media (max-width: 580px) {
+    /* Adjust styles for screens up to 580px wide */
+    .navigation {
+        word-spacing: 5px;
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .text {
+        width: 100%;
+        height: 51vh;
+    }
+
+    .text h1 {
+        font-size: 6vmin;
+        margin-top: 10%;
+        padding: 9px;
+    }
+
+    #insertForm {
+        overflow-y: auto;
+        height: 90%;
+    }
+    .closure {
+        margin-top: 1200px;
+    }
+}
