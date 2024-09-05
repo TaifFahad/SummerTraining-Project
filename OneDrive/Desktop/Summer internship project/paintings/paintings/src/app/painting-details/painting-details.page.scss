@@ -1,0 +1,148 @@
+/* Styles for ion-content */
+ion-content {
+  --background: #242424;
+}
+
+/* Styles for ion-card */
+ion-card {
+  max-width: 600px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --background: #504B3E;
+}
+
+ion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for ion-card-title */
+ion-card-title {
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-top: 15px;
+}
+
+/* Styles for ion-card-subtitle */
+ion-card-subtitle {
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styles for ion-card-content */
+ion-card-content {
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: grey;
+}
+
+/* Styles for ion-back-button */
+ion-back-button {
+  --color: #a58f74; /* Change the back button color to gold */
+}
+
+/* Styles for ion-title */
+ion-title{
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #a58f74;
+ /* Vertically center */
+  text-align:center; /* Center text inside the element */
+}
+
+/* Styles for ion-button */
+ion-button {
+  --ion-color-base: var(--background);
+  --ion-color-base-rgb: var(--background);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 50px; /* Rounded corners */
+  padding: 10px 20px; /* Adjust size of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for comment button */
+.comment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* Add spacing between buttons */
+  border-radius: 50px; /* Rounded corners for comment button */
+}
+
+/* Styles for comment date */
+.comment-date {
+  font-style: italic;
+  color: #999;
+}
+
+.like-button-container {
+  position: absolute;
+  bottom: 227px;
+  right: 1px;
+  color: #a58f74; 
+}
+
+/* Styling for like button */
+.like-button {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #a58f74; /* Set the color of the like button */
+  padding: 5px;
+}
+
+ion-button {
+  --color: #a58f74;
+}
+
+/* Button container */
+.comment-button-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the end (right side) */
+  align-items: center; /* Center align buttons vertically */
+  padding: 10px; /* Optional: Add padding for spacing */
+  border-radius: 50px;
+}
+
+.addComment-Button {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center; /* Center align buttons horizontally */
+  align-items: center; /* Center align buttons vertically */
+  padding: 10px; /* Optional: Add padding for spacing */
+  border-radius: 50px;
+}
+
+.addComment-Button ion-item {
+  border-radius: 30px;
+}
+
+.comment-button-container ion-button,
+.addComment-Button ion-button {
+  --background: #242424;
+  --color: #a58f74;
+}
+
+ion-item {
+  --background: #242424;
+}
+
+ion-list {
+  border-radius: 30px;
+}
+
+/* Styles for disabled button state */
+ion-button[disabled] {
+  opacity: 0.5;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.0em;
+  margin-top: 5px;
+}
+.required-star{
+  color: red;
+}

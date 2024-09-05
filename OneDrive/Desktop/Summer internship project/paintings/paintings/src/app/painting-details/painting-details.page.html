@@ -1,0 +1,181 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Painting Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="painting">
+    <img [alt]="painting.title" [src]="painting.primaryImage" />
+    <ion-card-header>
+      <ion-card-title>{{ painting.title }}</ion-card-title>
+      <ion-card-subtitle>{{ painting.artistDisplayName ? painting.artistDisplayName : 'Undefined Artist' }}</ion-card-subtitle>
+              </ion-card-header>
+    <ion-card-content>
+      <p><strong>Date:</strong> {{ painting.objectDate }}</p>
+      <p><strong>Medium:</strong> {{ painting.medium }}</p>
+      <p><strong>Dimensions:</strong> {{ painting.dimensions }}</p>
+      <p><strong>Description:</strong> {{ painting.creditLine }}</p>
+    </ion-card-content>
+    
+    <!-- Button Container
+    <div class="like-button-container">
+      <ion-button fill="clear" class="like-button" (click)="toggleLike(painting, $event)">
+        <ion-icon [name]="painting.liked ? 'heart' : 'heart-outline'" size="large"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="comment-button-container">
+      <ion-button expand="block" (click)="toggleComments()" class="comment-button">
+        <ion-icon slot="start" name="chatbubbles"></ion-icon>
+        {{ showComments ? 'Hide Comments' : 'Comments' }}
+      </ion-button>
+    </div>
+  </ion-card>
+
+  <!-- Display existing comments (if any) 
+  <ion-card *ngIf="showComments">
+    <ion-card-header>
+      <ion-card-title>Comments</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let comment of comments">
+          <ion-label>
+            <strong>{{ comment.username }}:</strong>
+            <p>{{ comment.comment }}</p>
+            <!- <p class="comment-date">{{ comment.date | date:'short' }}</p> 
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  Comment Form 
+  <ion-card *ngIf="showComments">
+    <ion-card-header>
+      <ion-card-title>Add Comment</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">
+          Enter your Name <span class="required-star">*</span>
+        </ion-label>
+        <ion-input [(ngModel)]="username" placeholder="Enter your Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Enter your comment <span class="required-star">*</span>
+        </ion-label>
+        <ion-input [(ngModel)]="newComment" placeholder="Enter your comment"></ion-input>
+      </ion-item>
+      <div class="addComment-Button">
+        <ion-button expand="full" (click)="addComment()" [disabled]="!newComment || !username">
+          <ion-icon slot="start" name="chatbubbles"></ion-icon>
+          Add Comment
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Painting Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="painting">
+    <img [alt]="painting.title" [src]="painting.primaryImage" />
+    <ion-card-header>
+      <ion-card-title>{{ painting.title }}</ion-card-title>
+      <ion-card-subtitle>{{ painting.artistDisplayName ? painting.artistDisplayName : 'Undefined Artist' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Date:</strong> {{ painting.objectDate }}</p>
+      <p><strong>Medium:</strong> {{ painting.medium }}</p>
+      <p><strong>Dimensions:</strong> {{ painting.dimensions }}</p>
+      <p><strong>Description:</strong> {{ painting.creditLine }}</p>
+    </ion-card-content>
+
+    <div class="like-button-container">
+      <ion-button fill="clear" class="like-button" (click)="toggleLike(painting, $event)">
+        <ion-icon [name]="painting.liked ? 'heart' : 'heart-outline'" size="large"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="comment-button-container">
+      <ion-button expand="block" (click)="toggleComments()" class="comment-button">
+        <ion-icon slot="start" name="chatbubbles"></ion-icon>
+        {{ showComments ? 'Hide Comments' : 'Comments' }}
+      </ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card *ngIf="showComments">
+    <ion-card-header>
+      <ion-card-title>Comments</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let comment of comments">
+          <ion-label>
+            <strong>{{ comment.username }}:</strong>
+            <p>{{ comment.comment }}</p>
+            <p class="comment-date">{{ comment.date | date: 'short' }}</p> <!-- Display the formatted date -->
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="showComments">
+    <ion-card-header>
+      <ion-card-title>Add Comment</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="commentForm" (ngSubmit)="addComment()">
+        <ion-item>
+          <ion-label position="stacked">
+            Enter your Name <span class="required-star">*</span>
+          </ion-label>
+          <ion-input
+            type="text"
+            formControlName="username"
+            placeholder="Enter your Name"
+          ></ion-input>
+        </ion-item>
+        <div *ngIf="commentForm.get('username')?.invalid && (commentForm.get('username')?.dirty || commentForm.get('username')?.touched)" class="error-message">
+          <div *ngIf="commentForm.get('username')?.hasError('required')">Name is required.</div>
+          <div *ngIf="commentForm.get('username')?.hasError('minlength')">Name must be at least 2 characters.</div>
+          <div *ngIf="commentForm.get('username')?.hasError('pattern')">Name must be alphabets and spaces only.</div>
+        </div>
+        <ion-item>
+          <ion-label position="stacked">
+            Enter your comment <span class="required-star">*</span>
+          </ion-label>
+          <ion-input
+            type="text"
+            formControlName="newComment"
+            placeholder="Enter your comment"
+          ></ion-input>
+        </ion-item>
+        <div *ngIf="commentForm.get('newComment')?.invalid && (commentForm.get('newComment')?.dirty || commentForm.get('newComment')?.touched)" class="error-message">
+          <div *ngIf="commentForm.get('newComment')?.hasError('required')">Comment is required.</div>
+          <div *ngIf="commentForm.get('newComment')?.hasError('minlength')">Comment must be at least 2 characters.</div>
+          <div *ngIf="commentForm.get('newComment')?.hasError('pattern')">Comment must be alphabets and spaces only.</div>
+        </div>
+        <div class="addComment-Button">
+          <ion-button expand="full" type="submit" [disabled]="!commentForm.valid">
+            <ion-icon slot="start" name="chatbubbles"></ion-icon>
+            Add Comment
+          </ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

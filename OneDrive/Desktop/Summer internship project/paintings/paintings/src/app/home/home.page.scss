@@ -1,0 +1,150 @@
+/* Change the background color */
+ion-content {
+  --background: #242424;
+}
+
+/* Center the search bar and move it up */
+ion-searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  max-width: 200px; /* Make the search bar smaller */
+  margin: 0 auto;
+  --color: #FEDAAE; /* Change the search bar color */
+}
+
+/* Styling for the logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-top: 5%;
+  width: 100px;
+  height: 70px;
+}
+
+/* Styling for the painting count */
+.painting-count {
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #a58f74;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+/* Styling for the found message */
+.found {
+  margin-top: 25px;
+  font-weight: bold;
+  position: absolute;
+  left: 4%;
+  bottom: 4%;
+  transform: translatex(290%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #a58f74;
+}
+
+/* Container for the card grid */
+.Card.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust the gap between rows as needed */
+  align-items: center; /* Center the card groups horizontally */
+}
+
+/* Container for individual cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between cards as needed */
+}
+
+/* Styling for each ion-card */
+// ion-card {
+//   --background: #504B3E;
+//   flex: 1 1 calc(45% - 20px); /* Two cards per row, accounting for gap */
+//   max-width: 45%; /* Adjust the width as needed */
+//   margin-right: 10px; /* Adjust the margin-right value as needed to control the spacing between the cards */
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+//   height: 350px; /* Set a fixed height for the cards */
+//   display: flex;
+//   flex-direction: column;
+//   position: relative; /* Ensure relative positioning for absolute elements */
+// }
+ion-card {
+width: 350px;
+  height: 350px; 
+  --background: #504B3E;
+//  box-shadow: 2px 2px 8px #504B3E; /* Adjust the shadow as needed */
+ // transition: transform 0.3s; /* Optional: Add a smooth transition */
+}
+ion-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+/* Styling for card content */
+ion-card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Styling for card images */
+ion-card img {
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover;
+}
+
+/* Styling for card headers */
+ion-card-header {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Styling for card titles */
+ion-card-title {
+  margin-top: 5%;
+  font-size: 14px; /* Adjust the font size as needed */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  flex: 1; /* Ensure title takes up remaining space */
+}
+
+/* Styling for card subtitles */
+ion-card-subtitle {
+  margin-top:2% ;
+  font-size: 10px; /* Adjust the font size as needed */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling for like button container */
+.like-button-container {
+  position: absolute;
+  bottom: 85px;
+  right: 15px;
+  color: #a58f74; 
+}
+
+/* Styling for like button */
+.like-button {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #a58f74; /* Set the color of the like button */
+  padding: 5px;
+}
+ion-button{
+  --color: #a58f74;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vh; /* Full viewport height to center vertically */
+
+
+}
+
